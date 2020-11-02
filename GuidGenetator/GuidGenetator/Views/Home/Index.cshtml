@@ -1,0 +1,64 @@
+﻿@using GuidGenetator.Controllers
+@model GuidViewModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="container-fluid">
+    <div class="text-center">
+        <h1 class="display-4">Free Guid Generator</h1>
+    </div>
+
+    @using (@Html.BeginForm("Create", "Home", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.GuidQuantity, "Number of Guids:")
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    @Html.TextBoxFor(m => m.GuidQuantity, new { @class = "form-control", autofocus = "autofocus" })
+                </div>
+            </div>
+
+            <div class="col-sm-1">
+
+            </div>
+
+            <div class="col-sm-2">
+                <div class="form-group form-check">
+                     @Html.LabelFor(m => m.IsUppercase, "Uppercase:", new{@class = "form-check-label"})
+                </div>
+            </div>
+            <div class="col-sm-1">
+                <div class="form-group form-check">
+                    @Html.CheckBoxFor(m => m.IsUppercase, new { @class = "form-check-input"})
+                </div>
+            </div>
+
+            <div class="col-sm-2">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.IsBetweenBraces, "Braces:", new{@class = "form-check-label"})
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group form-check">
+                    @Html.CheckBoxFor(m => m.IsBetweenBraces, new { @class = "form-check-input"})
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Create my GUIDs</button>
+    }
+    <br>
+    <hr class="thin-line">
+
+    <p>
+        @Html.Partial("Created", Model.GuidList)
+    </p>
+    
+</div>

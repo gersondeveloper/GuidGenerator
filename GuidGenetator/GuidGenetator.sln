@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuidGenetator", "GuidGenetator\GuidGenetator.csproj", "{FF153324-1C18-4BE8-9254-4AB13C387506}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF153324-1C18-4BE8-9254-4AB13C387506}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF153324-1C18-4BE8-9254-4AB13C387506}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF153324-1C18-4BE8-9254-4AB13C387506}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF153324-1C18-4BE8-9254-4AB13C387506}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
